@@ -1,0 +1,92 @@
+* {
+    color: red;
+    background-color: #ffda64;
+}
+
+button {
+    color: whitesmoke;
+    font-size: 20px;
+    background-color: black;
+}
+
+h1,
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: blueviolet;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+#signup {
+    background-color: brown;
+}
+
+#vote {
+    font-size: 10px;
+}
+
+p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: olive;
+}
+
+.tag {
+    font-size: 10px;
+    color: darkred;
+    background-color: beige;
+}
+
+li a {
+    color: black;
+}
+
+h2+button {
+    font-size: 20px;
+}
+
+footer>a {
+    color: orangered;
+}
+
+input[type="password"] {
+    color: plum;
+}
+
+section[class="post"] {
+    background-color: purple;
+}
+
+.post button:hover {
+    background-color: red;
+    color: black;
+}
+
+.post a:hover {
+    text-decoration: underline;
+    font-weight: 550;
+    color: black;
+}
+
+.post button:active {
+    background-color: green;
+}
+
+.post:nth-of-type(3n) {
+    background-color: rgb(255, 184, 255);
+}
+
+h2::first-letter {
+    font-size: 30px;
+}
+
+.para::first-line {
+    color: magenta
+}
+
+* ::selection {
+    color: grey;
+    background-color: whitesmoke;
+}

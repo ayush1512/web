@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Notes</title>
-    <style>
+    <!-- <style>
         h2 {
             color: palevioletred;
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -46,13 +46,14 @@
     <hr>
     <a href="CuttleFish CSS Text Example.css">Example</a>
     <ul>
-        <li>text-align</li>
+        <li>text-align </li>
         <li>font-weight</li>
         <li>text-decoration</li>
         <li>line-height</li>
         <li>letter-spacing</li>
         <li>font-size</li>
         <li>font-family</li>
+        <li>text-transform</li><!--Change the case of the letters-->
     </ul>
 
     <p>
@@ -78,11 +79,204 @@
 
     </p>
 
+    <H2>CSS Selectors</H2>
+    <p>
+        selector {
+        property : value;
+        }
+    </p>
+    <h3>Universal Selector</h3>
+    <p>* {
+        color : black;
+        }
+    </p>
+    <h3>ID Selector</h3>
+    <p>#logout {
+        color : orange;
+        height : 200px;
+        }
+    </p>
+    <h3>Class Selector</h3>
+    <p>.complete {
+        color: green;
+        }
+    </p>
+    <h3>Descendant Selector</h3>
+    <p>li a {
+        color: green;
+        }
+    </p> <!--Select all <a>'s that are nested inside an <li>'-->
+    <h3>Adjacent Selector</h3>
+    <p>h1 + p {
+        color: green;
+        }
+    </p> <!--Select only the paragraph that are immediately preceded by an <h1>-->
 
 
 
 
 
-</body>
+
+
+    <body>
+        <!-- HTML Inline CSS Styling
+    <h1 style="color: purple">Hello World</h1>
+    <button style="background-color: palegreen">I AM BUTTON</button> -->
+
+        <h2>The Style Element</h2>
+        <h5>
+            <h2>I am an H2</h2>
+            <h2>I am an H2</h2>
+            <h2>I am an H2</h2>
+        </h5>
+
+        <h2>External Style Sheet</h2>
+        <hr>
+        <p>
+            <link rel="stylesheet" href="">
+            /* element {
+            The Element Properties
+            } */
+        </p>
+
+        <h2>Colors in CSS</h2>
+        <p>
+            /* element {
+            color: ;
+            background-color: ;
+            } */
+        </p>
+
+        <h2>CSSText Properties</h2>
+        <hr>
+        <a href="CuttleFish CSS Text Example.css">Example</a>
+        <ul>
+            <li>text-align </li>
+            <li>font-weight</li>
+            <li>text-decoration</li>
+            <li>line-height</li>
+            <li>letter-spacing</li>
+            <li>font-size</li>
+            <li>font-family</li>
+            <li>text-transform</li><!--Change the case of the letters-->
+        </ul>
+
+        <p>
+        <h4>Units in sizing</h4>
+        <hr>
+        <h5>Relative</h5>
+        <ul>
+            <li>EM</li>
+            <li>REM</li>
+            <li>VH</li>
+            <li>VW</li>
+            <li>%</li>
+        </ul>
+        <br>
+        <h5>Absolute</h5>
+        <ul>
+            <li>PX</li>
+            <li>PT</li>
+            <li>CM</li>
+            <li>IN</li>
+            <li>MM</li>
+        </ul>
+
+        </p>
+
+        <H2>CSS Selectors</H2>
+        <p>
+            selector {
+            property : value;
+            }
+        </p>
+        <h3>Universal Selector</h3>
+        <p>* {
+            color : black;
+            }
+        </p>
+        <h3>ID Selector</h3>
+        <p>#logout {
+            color : orange;
+            height : 200px;
+            }
+        </p>
+        <h3>Class Selector</h3>
+        <p>.complete {
+            color: green;
+            }
+        </p>
+        <h3>Descendant Selector</h3>
+        <p>li a {
+            color: green;
+            }
+        </p> <!--Select all <a>'s that are nested inside an <li>'-->
+        <h3>Adjacent Selector</h3>
+        <p>h1 + p {
+            color: green;
+            }
+        </p> <!--Select only the paragraph that are immediately preceded by an <h1>-->
+        <h3>Direct Child</h3>
+        <p>div > li {
+            color : white;
+            }
+        </p> <!--Select only the <li>'s that are direct children of a <div> element-->
+        <h3>Attribute Selector</h3>
+        <p>input[type="text"]{
+            width: 300px;
+            color: yellow;
+            }
+        </p> <!--Select all input elements where the type attribute si set to "text"-->
+        <h3>Pseudo Classes</h3>
+        <p>keyword added to a selector that specifies a special state of the selected element(s)
+        <ul>
+            <li>:active</li>
+            <li>:checked</li>
+            <li>:first</li>
+            <li>:first-child</li>
+            <li>:hover</li>
+            <li>:not()</li>
+            <li>:nth-child()</li>
+            <li>:nth-of-type</li>
+        </ul>
+        </p>
+        <h3>Pseudo Elements</h3>
+        <p>Keyword added to a selector that lets you style a particular part of selected element(s)
+        <ul>
+            <li>::after</li>
+            <li>::before</li>
+            <li>::first-letter</li>
+            <li>::first-line</li>
+            <li>::selection</li>
+        </ul>
+        </p>
+        <h3>The Cascade</h3>
+        <p>The Order your styles are declared in and linked to matters!
+        <div>Example:</div>
+        <div>h1{
+            color: red;
+            }
+        </div>
+        <div>
+            h1{
+            color: purple;
+            }
+        </div>
+        here the purple style would be applied!
+        </p>
+        <h3>Specificity</h3>
+        <p>Order: Inline Styles > ID > [Class,Attribute,Pseudo-Class Selectors] > [Element and Pseudo Element Selectors]
+            <br>
+            Super Specific: !important attribute
+        </p>
+
+
+
+
+
+
+
+
+    </body>
 
 </html>
