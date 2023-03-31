@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 90, 90);
+}
+
+h1 {
+    width: 200px;
+    background-color: pink;
+    padding-left: 100px;
+    padding-top: 100px;
+    margin-bottom: 0;
+}
+
+span {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+#one {
+    background-color: rgb(255, 105, 130);
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    padding-top: 50px;
+    /* box-sizing: border-box; */
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+
+#two {
+    background-color: magenta;
+    border-color: blueviolet;
+    border-width: 3px;
+    border-style: dashed;
+    border-left-width: 5px;
+    border-left-color: black;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin: 200px;
+}
+
+#three {
+    background-color: darkmagenta;
+    border: 4px solid grey;
+    border-right: 5px dashed red;
+    border-radius: 10px;
+}
+
+button {
+    /* padding: 20px; */
+    /* padding: 10px 20px; */
+    padding: 2px 4px 6px 8px;
+}
