@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <a href="Project Race_Registration.html">Project Form</a>
+    <h1>Forms Demo</h1>
+    <!-- <button>OUTSIDE THE FORM -->
+    <!--No action is performed if outside the form-->
+    <!-- </button> -->
+    <form action="/tacos">
+        <!-- file:///C:/tacos?username=%40ayush15._.12&password=pass&color=%23d73333&number=544&datetime=87856 -->
+        <div>
+            <label for="username">Enter a Username:</label>
+            <input id="username" type="text" placeholder="username" name="username">
+            <!-- file:///C:/tacos?username=%40ayush15._.12 -->
+        </div>
+        <!-- <button type="sumbit">SUMBIT Action</button> -->
+        <div><label for="password">Enter a Password:</label>
+            <input id="password" type="password" placeholder="password" name="password">
+            <!-- file:///C:/tacos?username=&password=pass -->
+        </div>
+        <div>
+            <label for="color">Enter a Color:</label>
+            <input id="color" type="color" name="color">
+        </div>
+        <div>
+            <label for="number">Enter a Number:</label>
+            <input id="number" type="number" placeholder="enter a number" name="number" min="1" max="1000" step="2">
+        </div>
+        <div>
+            <label>
+                Enter a Date and Time: <!--Nesting input inside label to ignore for and id attributes.-->
+                <input type="datetime" placeholder="datetime" name="datetime">
+            </label>
+        </div>
+        <button>Submit!!!</button>
+        <!-- <button type="button">PLEASE DO NOT SUMBIT -->
+        <!--No action is performed due to type button-->
+        <!-- </button> -->
+        <input type="submit" value="Click Me!!">
+    </form>
+
+    <h2>More Inputs</h2>
+    <form action="/birds">
+        <input type="checkbox" name="agree_tos" id="agree" checked>
+        <label for="agree">I agree to everything</label>
+        <!-- file:///C:/birds?agree_tos=on -->
+        <p>
+            <label for="xs">XS
+                <input type="radio" name="size" id="xs" value="xs">
+            </label>
+            <label for="s">S
+                <input type="radio" name="size" id="s" value="s">
+            </label>
+            <label for="m">M
+                <input type="radio" name="size" id="m" value="m">
+            </label>
+        </p>
+        <p>
+            <label for="meal">Please select a meal type...</label>
+            <select name="meal_type" id="meal">
+                <option value="fish">Fish</option>
+                <option value="veg" selected>Vegetaraian</option>
+                <option value="steak">Steak</option>
+            </select>
+        </p>
+        <p>
+            <label for="cheese">Cheese</label>
+            <input type="range" name="cheese_level" id="cheese" min="1" max="10">
+        </p>
+        <p>
+            <label for="requests">Any special requests...</label>
+            <br>
+            <textarea name="req" id="requests" cols="10" rows="1" placeholder="some text"></textarea>
+        </p>
+        <button>Submit</button>
+    </form>
+
+    <h2>Validations Demo</h2>
+    <form action="/dummy">
+        <label for="first">Enter First Name</label>
+        <input type="text" name="f_name" id="first" required>
+        <button>Submit</button>
+        <p>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" minlength="5" maxlength="10">
+        </p>
+        <p>
+            <!-- <input type="email" required> -->
+            <input type="url">
+        </p>
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

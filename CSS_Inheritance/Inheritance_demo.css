@@ -1,0 +1,19 @@
+body {
+    color: purple;
+}
+
+section {
+    color: aqua;
+}
+
+form {
+    color: green;
+}
+
+button,
+input {
+    color: inherit;
+}
+
+/* The Inheritance works as when the closest possible element is having some properties. */
+/* Some properties are inheritable while some are not */

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: grey;
+        }
+
+        button {
+            background: none;
+            border: 2px lightcoral solid;
+            color: lightcoral;
+            padding: 1em 2em;
+            font-size: 1em;
+            margin: 2em 2em;
+        }
+
+        button:hover {
+            border: 2px yellow solid;
+            /* color: yellow; */
+            transition: color 0.2s, border-color 100ms, transform 0.5s;
+            box-shadow: 0 0.5em 0.5em -0.4em yellow;
+            /*X-offset, Y-offset, Blur radius, Spread*/
+            color: whitesmoke;
+            transform: translateY(-0.25em);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Hover Me</button>
+</body>
+
+</html>

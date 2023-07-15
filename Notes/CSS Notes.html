@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Notes</title>
+    <!-- <style>
+        h2 {
+            color: palevioletred;
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- HTML Inline CSS Styling
+    <h1 style="color: purple">Hello World</h1>
+    <button style="background-color: palegreen">I AM BUTTON</button> -->
+
+    <h2>The Style Element</h2>
+    <h5>
+        <h2>I am an H2</h2>
+        <h2>I am an H2</h2>
+        <h2>I am an H2</h2>
+    </h5>
+
+    <h2>External Style Sheet</h2>
+    <hr>
+    <p>
+        <link rel="stylesheet" href="">
+        /* element {
+        The Element Properties
+        } */
+    </p>
+
+    <h2>Colors in CSS</h2>
+    <p>
+        /* element {
+        color: ;
+        background-color: ;
+        } */
+    </p>
+
+    <h2>CSSText Properties</h2>
+    <hr>
+    <a href="CuttleFish CSS Text Example.css">Example</a>
+    <ul>
+        <li>text-align </li>
+        <li>font-weight</li>
+        <li>text-decoration</li>
+        <li>line-height</li>
+        <li>letter-spacing</li>
+        <li>font-size</li>
+        <li>font-family</li>
+        <li>text-transform</li><!--Change the case of the letters-->
+    </ul>
+
+    <p>
+    <h4>Units in sizing</h4>
+    <hr>
+    <h5>Relative</h5>
+    <ul>
+        <li>EM</li>
+        <li>REM</li>
+        <li>VH</li>
+        <li>VW</li>
+        <li>%</li>
+    </ul>
+    <br>
+    <h5>Absolute</h5>
+    <ul>
+        <li>PX</li>
+        <li>PT</li>
+        <li>CM</li>
+        <li>IN</li>
+        <li>MM</li>
+    </ul>
+
+    </p>
+
+    <H2>CSS Selectors</H2>
+    <p>
+        selector {
+        property : value;
+        }
+    </p>
+    <h3>Universal Selector</h3>
+    <p>* {
+        color : black;
+        }
+    </p>
+    <h3>ID Selector</h3>
+    <p>#logout {
+        color : orange;
+        height : 200px;
+        }
+    </p>
+    <h3>Class Selector</h3>
+    <p>.complete {
+        color: green;
+        }
+    </p>
+    <h3>Descendant Selector</h3>
+    <p>li a {
+        color: green;
+        }
+    </p> <!--Select all <a>'s that are nested inside an <li>'-->
+    <h3>Adjacent Selector</h3>
+    <p>h1 + p {
+        color: green;
+        }
+    </p> <!--Select only the paragraph that are immediately preceded by an <h1>-->
+
+
+
+
+
+
+
+    <body>
+        <!-- HTML Inline CSS Styling
+    <h1 style="color: purple">Hello World</h1>
+    <button style="background-color: palegreen">I AM BUTTON</button> -->
+
+        <h2>The Style Element</h2>
+        <h5>
+            <h2>I am an H2</h2>
+            <h2>I am an H2</h2>
+            <h2>I am an H2</h2>
+        </h5>
+
+        <h2>External Style Sheet</h2>
+        <hr>
+        <p>
+            <link rel="stylesheet" href="">
+            /* element {
+            The Element Properties
+            } */
+        </p>
+
+        <h2>Colors in CSS</h2>
+        <p>
+            /* element {
+            color: ;
+            background-color: ;
+            } */
+        </p>
+
+        <h2>CSSText Properties</h2>
+        <hr>
+        <a href="CuttleFish CSS Text Example.css">Example</a>
+        <ul>
+            <li>text-align </li>
+            <li>font-weight</li>
+            <li>text-decoration</li>
+            <li>line-height</li>
+            <li>letter-spacing</li>
+            <li>font-size</li>
+            <li>font-family</li>
+            <li>text-transform</li><!--Change the case of the letters-->
+        </ul>
+
+        <p>
+        <h4>Units in sizing</h4>
+        <hr>
+        <h5>Relative</h5>
+        <ul>
+            <li>EM</li>
+            <li>REM</li>
+            <li>VH</li>
+            <li>VW</li>
+            <li>%</li>
+        </ul>
+        <br>
+        <h5>Absolute</h5>
+        <ul>
+            <li>PX</li>
+            <li>PT</li>
+            <li>CM</li>
+            <li>IN</li>
+            <li>MM</li>
+        </ul>
+        </p>
+        <hr>
+        <h2>CSS Selectors</h2>
+
+        <p>
+            selector {
+            property : value;
+            }
+        </p>
+        <h3>Universal Selector</h3>
+        <p>* {
+            color : black;
+            }
+        </p>
+        <h3>ID Selector</h3>
+        <p>#logout {
+            color : orange;
+            height : 200px;
+            }
+        </p>
+        <h3>Class Selector</h3>
+        <p>.complete {
+            color: green;
+            }
+        </p>
+        <h3>Descendant Selector</h3>
+        <p>li a {
+            color: green;
+            }
+        </p> <!--Select all <a>'s that are nested inside an <li>'-->
+        <h3>Adjacent Selector</h3>
+        <p>h1 + p {
+            color: green;
+            }
+        </p> <!--Select only the paragraph that are immediately preceded by an <h1>-->
+        <h3>Direct Child</h3>
+        <p>div > li {
+            color : white;
+            }
+        </p> <!--Select only the <li>'s that are direct children of a <div> element-->
+        <h3>Attribute Selector</h3>
+        <p>input[type="text"]{
+            width: 300px;
+            color: yellow;
+            }
+        </p> <!--Select all input elements where the type attribute si set to "text"-->
+        <h3>Pseudo Classes</h3>
+        <p>keyword added to a selector that specifies a special state of the selected element(s)
+        <ul>
+            <li>:active</li>
+            <li>:checked</li>
+            <li>:first</li>
+            <li>:first-child</li>
+            <li>:hover</li>
+            <li>:not()</li>
+            <li>:nth-child()</li>
+            <li>:nth-of-type</li>
+        </ul>
+        </p>
+        <h3>Pseudo Elements</h3>
+        <p>Keyword added to a selector that lets you style a particular part of selected element(s)
+        <ul>
+            <li>::after</li>
+            <li>::before</li>
+            <li>::first-letter</li>
+            <li>::first-line</li>
+            <li>::selection</li>
+        </ul>
+        </p>
+        <h3>The Cascade</h3>
+        <p>The Order your styles are declared in and linked to matters!
+        <div>Example:</div>
+        <div>h1{
+            color: red;
+            }
+        </div>
+        <div>
+            h1{
+            color: purple;
+            }
+        </div>
+        here the purple style would be applied!
+        </p>
+        <h3>Specificity</h3>
+        <p>Order: Inline Styles > ID > [Class,Attribute,Pseudo-Class Selectors] > [Element and Pseudo Element Selectors]
+            <br>
+            Super Specific: !important attribute
+        </p>
+        <hr>
+        <h2>CSS Box Model</h2>
+        element{
+        width: ;
+        height: ;
+        <h3>Border Properties</h3>
+        border-width: ;
+        border-color: ;
+        border-style: ;
+        border-left-color: ;
+        border-right-style: ;
+        border : width | style | color <!--Shorthand of applying a border-->
+        border-radius: ;
+        border-top-left-radius: ;
+        <h3>Padding</h3> Spacing inside of the border
+        <div>padding: ; Applies evenly padding to all four sides</div>
+        <div>padding-left: ; Applies padding only to the left side</div>
+        <div>padding: vertical | horizontal; 2 padding values</div>
+        <div>padding: top | horizontal | bottom; 3 padding values</div>
+        <div>padding: top | right | bottom | left; 4 padding values</div>
+        <h3>Margin</h3>
+        <div>Spacing outside the border</div>
+        Same as padding
+        }
+
+        <h2>Display Property</h2>
+        <h4>Inline</h4>
+        <span>Width and height are ignored. Margin and padding push elements away horizontally but not vertically</span>
+        <h4>Block</h4>
+        <span>Block Elements break the flow of a Document. Width, height, margin and Padding are respected.</span>
+        <h4>Inline-Block</h4>
+        <span>Behaved like an inline element except width, height, margin, and padding are respected</span>
+        <hr>
+        <h2>CSS Units</h2>
+        <p><a href="CSS_Units.html">HTML link </a><a href="CSS_Units.css">CSS link</a></p>
+        <p>em's and rem's</p>
+        <p>The % is for the percent change from the parent element's size</p>
+        <p>em is for the times multiplier for the relative size</p>
+        <p>These ems possess drawback while we nest elements inside one another hence we use rem's or root em's which
+            takes the relative size of the root element</p>
+        <hr>
+        <h2>Opacity</h2>
+        <p><a href="CSS_Opacity.html">HTML link </a><a href="CSS_Opacity.css">CSS link</a></p>
+        <p>Alpha Channel controls the colors opacity and not the element's opacity</p>
+        <p>Using opacity property we can change the opacity levels of the whole element</p>
+        <hr>
+        <h2>Transition:</h2>
+        <p><a href="CSS_Transitions.html">HTML link </a><a href="CSS_Transitions.css">CSS link</a></p>
+        <p>property_name|duration|timing_function|delay</p>
+        <p>transition-timing-function:
+            <li>linear</li>
+            <li>ease-in</li>
+            <li>steps(6,end)</li>
+            <li>cubic-beizer()</li>
+        </p>
+        <hr>
+        <h2>Transform</h2>
+        <p><a href="CSS_Transform.html">HTML link </a><a href="CSS_Transform.css">CSS link</a></p>
+
+        <h2>Position</h2>
+        <p><a href="CSS_Position.html">HTML link </a><a href="CSS_Position.css">CSS link</a>
+            <a href="CSS_Position_Sticky.html">Sticky Position</a>
+        </p>
+
+        <h3>Hover Effect</h3>
+        <p><a href="Hover_Effect.html">HTML link</a></p>
+
+        <h2>Background</h2>
+        <p><a href="CSS_Background.html">HTML link</a></p>
+
+        <hr>
+
+        <h2>Flexbox</h2>
+        <h3>Display</h3>
+        <p>display: flex;</p>
+        <h3>Flex-Direction</h3>
+        <p>flex-direction: row(default)</p>
+        <p>flex-direction: row-reverse</p>
+        <p>flex-direction: column</p>
+        <p>flex-direction: column-reverse</p>
+        <h3>Justify Content</h3>
+        <p>justify-content: flex-start</p>
+        <p>justify-content: flex-end</p>
+        <p>justify-content: center</p>
+        <p>justify-content: space-between</p>
+        <p>justify-content: space-around</p>
+        <p>justify-content: space-evenly</p>
+        <h3>Flex Wrap</h3>
+        <p>flex-wrap: wrap</p>
+        <p>flex-wrap: wrap-reverse</p>
+        <p>flex-wrap: nowrap</p>
+        <h3>Align Items</h3>
+        <p>align-items: flex-start</p>
+        <p>align-items: flex-end</p>
+        <p>align-items: center</p>
+        <p>align-items: baseline</p>
+        <h3>Align Content</h3> <!--Only works with flex wrap is on-->
+        <p>align-content: space-between</p>
+        <p>align-content: flex-start</p>
+        <p>align-content: flex-end</p>
+        <p>align-content: center</p>
+        <h3>Align Self</h3>
+        <p>align-self: center</p>
+        <p>align-self: flex-end</p>
+        <h3>Flex Basis</h3> <!--Initial main size of the box-->
+        <p>flex-basis: auto</p>
+        <p>flex-basis: 0px;</p>
+        <h3>Flex Grow</h3>
+        <p>flex-grow: 1</p>
+        <h3>Flex Shrink</h3>
+        <p>flex-shrink: 1</p>
+        <h3>Shorthand Property</h3>
+        <p>flex: flex-grow| flex-shrink| flex-basis</p>
+
+        <hr>
+
+        <h2>Media Queries</h2>
+        <p>@media (width: 500px){}</p>
+        <p>@media (min-width: 500px){}</p>
+        <p>@media (max-width: 500px){}</p>
+
+        <h2>CSS Reset</h2>
+        <p>html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+            body {
+                line-height: 1;
+            }
+            ol, ul {
+                list-style: none;
+            }
+            blockquote, q {
+                quotes: none;
+            }
+            blockquote:before, blockquote:after,
+            q:before, q:after {
+                content: '';
+                content: none;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }</p>
+
+
+
+
+    </body>
+
+</html>
