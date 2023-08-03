@@ -1,4 +1,1 @@
-// Example_ repo
-This is a sample repo, hello world!, hello coders!
-
-This is a second change.
+### This a repo for the web development I've been learning 
