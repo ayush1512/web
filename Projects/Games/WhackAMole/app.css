@@ -1,0 +1,127 @@
+body {
+	margin: 0 auto;
+	max-width: 40em;
+	width: 88%;
+}
+
+/**
+ * Add box sizing to everything
+ * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+svg {
+    pointer-events: none;
+}
+
+/**
+ * Mole Holes
+ */
+
+.field {
+	background-color: #3d9970;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-column-gap: 0;
+	grid-row-gap: 0;
+	padding: 1em 0;
+}
+
+.plot {
+	height: 6em;
+	padding: 0.5em;
+	text-align: center;
+}
+
+#plot0 { grid-area: 1 / 1 / 2 / 2; }
+#plot1 { grid-area: 1 / 2 / 2 / 3; }
+#plot2 { grid-area: 1 / 3 / 2 / 4; }
+#plot3 { grid-area: 2 / 1 / 3 / 2; }
+#plot4 { grid-area: 2 / 2 / 3 / 3; }
+#plot5 { grid-area: 2 / 3 / 3 / 4; }
+#plot6 { grid-area: 3 / 1 / 4 / 2; }
+#plot7 { grid-area: 3 / 2 / 4 / 3; }
+#plot8 { grid-area: 3 / 3 / 4 / 4; }
+
+.hole {
+	background-color: #654321;
+	border-radius: 50%;
+	display: inline-block;
+	height: 4em;
+	max-width: 100%;
+	width: 4em;
+}
+
+/**
+ * Score
+ */
+#stats {
+	display: grid;
+	font-size: 1.3125em;
+	font-weight: bold;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 0;
+	grid-row-gap: 0;
+	margin-bottom: 0.5em;
+}
+
+#score { grid-area: 1 / 1 / 2 / 2; }
+#timer {
+	grid-area: 1 / 2 / 2 / 3;
+	text-align: right;
+}
+
+
+/**
+ * Buttons
+ */
+#start-game {
+	background-color: #ff4136;
+	border: none;
+	color: #ffffff;
+	display: block;
+	font-size: 1.3125em;
+	margin: 2em auto 0;
+	padding: 0.5em 2em;
+}
+
+#start-game:focus,
+#start-game:hover {
+	background-color: #c5342b;
+}
+
+button {
+	cursor: pointer;
+}
+
+button:active {
+	box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
+	outline: 0;
+}
+
+
+/**
+ * Mole
+ */
+
+.mole {
+	background: transparent;
+	border: none;
+	display: inline-block;
+	padding: 0;
+
+}
+
+.mole svg {
+	fill: #654321;
+	height: 4.307692308em;
+	max-width: 100%;
+	width: 4em;
+}
