@@ -1,300 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Notes</title>
     <style>
-        h1{
+        h1 {
             color: whitesmoke;
             background-color: black;
             text-align: center;
         }
-        h3{
+
+        h3 {
             color: whitesmoke;
             background-color: grey;
             text-align: center;
         }
-        p{
+
+        p {
             font-size: 20px;
             font-family: Arial, Helvetica, sans-serif;
             color: brown;
             display: flex;
         }
-        
-        
-        
     </style>
 </head>
+
 <body>
     <h1>JavaScript Console</h1>
     <p class="para">R.E.P.L. Read Evaluate Print Loop</p>
     <hr>
     <p>
-        <h3><b>this. keyword</b></h3>
-        const buffalo = {
-            name : 'Rabbu',
-            colour: 'brown',
-            breed: 'padhwa',
-            hon(){
-                console.log("THIS IS:", this)
-                console.log(`${this.name} is a ${this.colour} buffalo`)
-            }
-        }
-        const hon2 = buffalo.hon;
+    <h3><b>this. keyword</b></h3>
+    const buffalo = {
+    name : 'Rabbu',
+    colour: 'brown',
+    breed: 'padhwa',
+    hon(){
+    console.log("THIS IS:", this)
+    console.log(`${this.name} is a ${this.colour} buffalo`)
+    }
+    }
+    const hon2 = buffalo.hon;
     </p>
     <hr>
     <p>
-        <h3><b>Try/Catch</b></h3>
-        try{
-        } catch (e) {
+    <h3><b>Try/Catch</b></h3>
+    try{
+    } catch (e) {
 
-        }
+    }
     </p>
     <hr>
     <p>
-            <h3><b><i>forEach() function</i></b></h3>
-            const numbers = {1,2,3,4,5,6,7,8,9,10,11,12}
-            numbers.forEach(function (el) {
-                console.log(el)
-            })
-            <!-- function print(element){
+    <h3><b><i>forEach() function</i></b></h3>
+    const numbers = {1,2,3,4,5,6,7,8,9,10,11,12}
+    numbers.forEach(function (el) {
+    console.log(el)
+    })
+    <!-- function print(element){
                 console.log(element);
             }
             numbers.forEach(print); -->
     </p>
     <hr>
     <p>
-        <h3><b>map method</b></h3>
-        const numbers = [1,2,3,4,5,6,7,8,9,10,11,12];
-        const doubles = numbers.map(function (num){
-            return num * 2;
-        })
+    <h3><b>map method</b></h3>
+    const numbers = [1,2,3,4,5,6,7,8,9,10,11,12];
+    const doubles = numbers.map(function (num){
+    return num * 2;
+    })
     </p>
     <hr>
     <p>
-        <h3><b>Arrow function</b></h3>
-        const add = (x,y) => {
-            return x+y;
-        }
-        const rollDie = () => (
-            Math.floor(Math.random() * 6) + 1
-        ) <!--Implicit return-->
-        const add = (x,y) => x+y;        
+    <h3><b>Arrow function</b></h3>
+    const add = (x,y) => {
+    return x+y;
+    }
+    const rollDie = () => (
+    Math.floor(Math.random() * 6) + 1
+    ) <!--Implicit return-->
+    const add = (x,y) => x+y;
     </p>
     <hr>
     <p>
-        <H3><b>setTimeoput and setInterval function</b></H3>
-        console.log("HELLO......")
-        setTimeout(() => {
-        console.log("..........are you still there?")
-        }, 3000)
-        
-        const id = setInterval(() => {
-            console.log(Math.random())
-        }, 2000)
+    <H3><b>setTimeoput and setInterval function</b></H3>
+    console.log("HELLO......")
+    setTimeout(() => {
+    console.log("..........are you still there?")
+    }, 3000)
+
+    const id = setInterval(() => {
+    console.log(Math.random())
+    }, 2000)
     </p>
     <hr>
     <p>
-        <h3><b>filter method</b></h3>
-        numbers.filter(n => {
-            return n < 10
-        })
-    </p>
-    <hr>
-    <p>
-        <b><h3>some and every methods</h3></b>
-        const exams = [80,72,48,45,17,96,74,24,98,35,41];
-        exams.every(score => score >= 75);
-        exams.some(score => score >= 75);
-    </p>
-    <hr>
-    <p>
-        <b><h3>reduce method</h3></b>
-        [3,5,7,9,11].reduce((accumulator, currentValue) => {
+    <h3><b>filter method</b></h3>
+    numbers.filter(n => {
+    return n < 10 }) </p>
+        <hr>
+        <p>
+            <b>
+                <h3>some and every methods</h3>
+            </b>
+            const exams = [80,72,48,45,17,96,74,24,98,35,41];
+            exams.every(score => score >= 75);
+            exams.some(score => score >= 75);
+        </p>
+        <hr>
+        <p>
+            <b>
+                <h3>reduce method</h3>
+            </b>
+            [3,5,7,9,11].reduce((accumulator, currentValue) => {
             return accumulator + currentValue;
-        });
-        <!-- The accumulator starts with the first value of the array, the currentValue stats with the 2nd index and after the return value is stored in the accumulator and the currentValue is then shifted onto the 3rd index value and so on...   -->
-        <!-- Using this method we can get the total sum of the whole array. -->
-        [3,5,7,9,11].reduce((acc,cV) => (acc+cV));
-        [3,5,7,9,11].reduce((acc,cV) => (acc+cV),100);
-        <!-- This second parameter will become the initial accumulator value when given -->
-    </p>
-    <hr>
-    <p>
-        <b><h3>arrow function and this keyword</h3></b>
-        const person = {
+            });
+            <!-- The accumulator starts with the first value of the array, the currentValue stats with the 2nd index and after the return value is stored in the accumulator and the currentValue is then shifted onto the 3rd index value and so on...   -->
+            <!-- Using this method we can get the total sum of the whole array. -->
+            [3,5,7,9,11].reduce((acc,cV) => (acc+cV));
+            [3,5,7,9,11].reduce((acc,cV) => (acc+cV),100);
+            <!-- This second parameter will become the initial accumulator value when given -->
+        </p>
+        <hr>
+        <p>
+            <b>
+                <h3>arrow function and this keyword</h3>
+            </b>
+            const person = {
             firstName: 'Hugo',
             lastName: 'Hector',
             fullName: function() {
-               return `${this.firstName} ${this.lastName}`
+            return `${this.firstName} ${this.lastName}`
             },
             fullName2: () => {
-                return `${this.firstName} ${this.lastName}`
+            return `${this.firstName} ${this.lastName}`
             },
             shoutName: function() {
-                setTimeout(function() {
-                    console.log(this)
-                    console.log(this.fullName())
-                }, 3000) // tyr changing the fullName function to understand.
+            setTimeout(function() {
+            console.log(this)
+            console.log(this.fullName())
+            }, 3000) // tyr changing the fullName function to understand.
             },
             shoutName2: function() {
-                setTimeout(() => {
-                    console.log(this)
-                    console.log(this.fullName())
-                }, 3000)
+            setTimeout(() => {
+            console.log(this)
+            console.log(this.fullName())
+            }, 3000)
             }
-        }
-    </p>
-    <hr>
-    <p>
-        <b><h3>Default Params</h3></b>
-        Default Params Old
-        function rollDieOld(numSides) {
+            }
+        </p>
+        <hr>
+        <p>
+            <b>
+                <h3>Default Params</h3>
+            </b>
+            Default Params Old
+            function rollDieOld(numSides) {
             if (numSides == undefined) {
-                numSides = 6;
+            numSides = 6;
             }
             return Math.floor(Math.random() * numSides) + 1;
-        }
+            }
 
-        Default Params New
-        function rollDieNew(numSides = 6) { // the default value would remain in the parameters
+            Default Params New
+            function rollDieNew(numSides = 6) { // the default value would remain in the parameters
             return Math.floor(Math.random() * numSides) + 1;
-        }
-    </p>
-    <hr>
-    <p>
-        <b><h3>Spread Syntax</h3></b>
-        const nums = [1,23,186,65,54,74,6,2174]
-        Math.max(nums); // this gives us undefined because the function accpets seperate arguments while passing an array is a single argument
-        Math.max(...nums);  // this spreads the whole array passed as seperate arguments which the fucntion accepts and return the answer
-    </p>
-    <hr>
-    <p>
-        <b><h3>Spread with Array Literals</h3></b>
-        const cats = ['Blue', 'Scout', 'Rocket'];
-        const dogs = ['Rusty', 'Wyatt'];
-        const allPets = [...cats, ...dogs] // copies the arrays into a new and different array
-    </p>
-    <hr>
-    <p>
-        <b><h3>Spread in Object Literals</h3></b>
-        const feline = {legs: 4, family: 'Felidae'};
-        const canine = {isFurry: true, family: 'Caninae'}
-        newObjectLiteral = {...feline, bad: true} // with object literal possess the same function like with array literals
-    </p>
-    <hr>
-    <p>
-        <b><h3>Rest Params</h3></b>
-        function sum(...nums) {
-            return nums.reduce((total,el) => total+el) // [...] is the rest operator 
-        }
-    </p>
-    <hr>
-    <p>
-        <b><h3>Destructuring</h3></b>
-        // Destructuring Arrays
-        const scores = [6519641,58956,82198,89485]
-        const highScore = scores[0];
-        const secondHighestScore = scores[1]
-        
-        // Destructuring used for extraction
-        const [gold,silver, ...rest] = scores;
-        
-        // Destructuring Objects
-        const {email: userEmail, work = 'default argument'} = user;
-        
-        // Destructuring Params
-        function fullName(user){
+            }
+        </p>
+        <hr>
+        <p>
+            <b>
+                <h3>Spread Syntax</h3>
+            </b>
+            const nums = [1,23,186,65,54,74,6,2174]
+            Math.max(nums); // this gives us undefined because the function accpets seperate arguments while passing an
+            array is a single argument
+            Math.max(...nums); // this spreads the whole array passed as seperate arguments which the fucntion accepts
+            and return the answer
+        </p>
+        <hr>
+        <p>
+            <b>
+                <h3>Spread with Array Literals</h3>
+            </b>
+            const cats = ['Blue', 'Scout', 'Rocket'];
+            const dogs = ['Rusty', 'Wyatt'];
+            const allPets = [...cats, ...dogs] // copies the arrays into a new and different array
+        </p>
+        <hr>
+        <p>
+            <b>
+                <h3>Spread in Object Literals</h3>
+            </b>
+            const feline = {legs: 4, family: 'Felidae'};
+            const canine = {isFurry: true, family: 'Caninae'}
+            newObjectLiteral = {...feline, bad: true} // with object literal possess the same function like with array
+            literals
+        </p>
+        <hr>
+        <p>
+            <b>
+                <h3>Rest Params</h3>
+            </b>
+            function sum(...nums) {
+            return nums.reduce((total,el) => total+el) // [...] is the rest operator
+            }
+        </p>
+        <hr>
+        <p>
+            <b>
+                <h3>Destructuring</h3>
+            </b>
+            // Destructuring Arrays
+            const scores = [6519641,58956,82198,89485]
+            const highScore = scores[0];
+            const secondHighestScore = scores[1]
+
+            // Destructuring used for extraction
+            const [gold,silver, ...rest] = scores;
+
+            // Destructuring Objects
+            const {email: userEmail, work = 'default argument'} = user;
+
+            // Destructuring Params
+            function fullName(user){
             const {firstName,lastName='adsdasd'} = user;
             return `${firstName} ${lastName}`
-        }
-    </p>
-    <hr>
-    <p>
-        <b><h3>DOM</h3></b>
-        Document Object Model
-        Two step process of first selecting the object and then manipulating it
-        <br>
-        document
-        console.dir(document)
-        <br>
-        <b>Selecting:</b>
-        getElementById('id')
-        getElementByTagName('tag')
-        getElementByClassName('class')
-        querySelector()
-        querySelectorAll()
-        <br>
-        <b>Manipulating: Properties and Methods</b>
-        .innerText
-        .textContent
-        .innerHTML
-        .id
-        .src
-        .type
-        .title
-        <br>
-        <i>Changing Styles</i>
-        .style <!-- The style only shows the style applied to the inline style sheet and ignores the css file styling> -->
-        window.getComputedStyle
-        <br>
-        <i>Attributes</i>
-        getAttribute()
-        setAttribute()
-        <br>
-        <i>ClassList</i>
-        .classList.add()
-        .classList.remove()
-        .classList.toggle()
-        .classList.contains()
-        <br>
-        <i>Traversing Parent/Child/Sibling</i>
-        .parentElement
-        .children
-        .childELementCount
-        .childNodes
-        .nextSibling
-        .previousElementSibling
-        <i>Appending</i>
-        document.createElement()
-        .appendChild()
-        .append()
-        .prepend()
-        .insertAdjacentElement(position,element)
-        .after() = .insertAdjacentElement('afterend',element)
-        <i>Removing</i>
-        ChildNode.remove()
+            }
+        </p>
         <hr>
-        <b><h3>DOM Events</h3></b>
-        <b>Inline Events</b>
-        onclick
-        ondblclick
-        onmouseenter
-        <br>
-        <b>addEventListener()</b>
-        element.addEventListener('event',callBackFunction)
-        This helps us in applying more than one function with the event which is normally overridden by the last applied function.
-        <br>
-        <b>Events and this keyword</b>
-        <a href="E:\Repos\web\JavaScript\DOM\Events_This_Keyword\index.html">Link</a>
-        <br>
-        <b>Keyboard Events and Event Objects</b>
-        <a href="E:\Repos\web\JavaScript\DOM\EventObjects\index.html">Link</a>
-        <br>
-        <b>DOM Events</b>
-        <a href="E:\Repos\web\JavaScript\DOM">Folder Link</a>
-        <br>
-        <b>ES6</b>
+        <p>
+            <b>
+                <h3>DOM</h3>
+            </b>
+            Document Object Model
+            Two step process of first selecting the object and then manipulating it
+            <br>
+            document
+            console.dir(document)
+            <br>
+            <b>Selecting:</b>
+            getElementById('id')
+            getElementByTagName('tag')
+            getElementByClassName('class')
+            querySelector()
+            querySelectorAll()
+            <br>
+            <b>Manipulating: Properties and Methods</b>
+            .innerText
+            .textContent
+            .innerHTML
+            .id
+            .src
+            .type
+            .title
+            <br>
+            <i>Changing Styles</i>
+            .style
+            <!-- The style only shows the style applied to the inline style sheet and ignores the css file styling> -->
+            window.getComputedStyle
+            <br>
+            <i>Attributes</i>
+            getAttribute()
+            setAttribute()
+            <br>
+            <i>ClassList</i>
+            .classList.add()
+            .classList.remove()
+            .classList.toggle()
+            .classList.contains()
+            <br>
+            <i>Traversing Parent/Child/Sibling</i>
+            .parentElement
+            .children
+            .childELementCount
+            .childNodes
+            .nextSibling
+            .previousElementSibling
+            <i>Appending</i>
+            document.createElement()
+            .appendChild()
+            .append()
+            .prepend()
+            .insertAdjacentElement(position,element)
+            .after() = .insertAdjacentElement('afterend',element)
+            <i>Removing</i>
+            ChildNode.remove()
+            <hr>
+            <b>
+                <h3>DOM Events</h3>
+            </b>
+            <b>Inline Events</b>
+            onclick
+            ondblclick
+            onmouseenter
+            <br>
+            <b>addEventListener()</b>
+            element.addEventListener('event',callBackFunction)
+            This helps us in applying more than one function with the event which is normally overridden by the last
+            applied function.
+            <br>
+            <b>Events and this keyword</b>
+            <a href="E:\Repos\web\JavaScript\DOM\Events_This_Keyword\index.html">Link</a>
+            <br>
+            <b>Keyboard Events and Event Objects</b>
+            <a href="E:\Repos\web\JavaScript\DOM\EventObjects\index.html">Link</a>
+            <br>
+            <b>DOM Events</b>
+            <a href="E:\Repos\web\JavaScript\DOM">Folder Link</a>
+            <br>
+            <b>ES6</b>
         <ul>
             <li>Callback
                 <br>
                 <a href="E:\Repos\web\JavaScript\Async\CallBack\index.html">link</a>
             </li>
-            <li>Promises: A Promise is an object representating the eventual completion or failure of an asynchronous operation.
+            <li>Promises: A Promise is an object representating the eventual completion or failure of an asynchronous
+                operation.
                 <br>
-                A promise is a returned object to which you attach callbacks, instead of passing callbacks into a function.
+                A promise is a returned object to which you attach callbacks, instead of passing callbacks into a
+                function.
                 <br>
                 <a href="E:\Repos\web\JavaScript\Async\Promises\index.html">link</a>
             </li>
@@ -306,14 +334,21 @@
                 <br>
                 Await keyword: we can only use await inside of functions declared with async.
                 await will pause the execution of the function, waiting for a promise to be resolved.
-            </li>           
+            </li>
         </ul>
-        
+        <br>
+        <b>Prototypes</b>
+        <p>  a prototype is an object that is associated with every function and object by default. It acts
+            as a blueprint for creating new objects. When you create a new object or function, JavaScript automatically
+            assigns a prototype object to it. This prototype object contains properties and methods that can be accessed
+            by instances of the object or function. By using prototypes, you can add new properties and methods to
+            existing objects or functions, which allows for inheritance and code reuse.</p>
 
-        
 
 
-    </p>
-    <script src="JavaScript_Notes.js"></script>
+
+        </p>
+        <script src="JavaScript_Notes.js"></script>
 </body>
+
 </html>
