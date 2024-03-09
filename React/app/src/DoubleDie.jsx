@@ -3,7 +3,8 @@ import "./DoubleDie.css";
 export default function DoubleDie() {
   const num1 = Math.floor(Math.random() * 3) + 1;
   const num2 = Math.floor(Math.random() * 3) + 1;
-  const styles = { color: "purple", fontSize: "40px"};
+  // const styles = { color: "purple", fontSize: "40px"};
+  const styles = {color : num1 === num2 ? 'green' : 'red'};
   return (
     <>
       <div className="DoubleDie" style={styles}>
