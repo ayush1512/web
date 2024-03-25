@@ -16,6 +16,8 @@ export default function ColorBox({ colors }) {
     <div
       className="ColorBox"
       onWheelCapture={changeColor}
+      // onMouseOver={changeColor}
+      onClick={changeColor}
       style={{ backgroundColor: color }}
     ></div>
   );

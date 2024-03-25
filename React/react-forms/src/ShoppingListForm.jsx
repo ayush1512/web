@@ -1,20 +1,23 @@
 import { useState } from "react";
-
-export default function ShoppingListForm() {
+function ShoppingListForm({ addItem }) {
   const [formData, setFormData] = useState({ product: "", quantity: 0 });
-  const handleChange = (e) => {
+  const handleChange = (evt) => {
     setFormData((currData) => {
       return {
         ...currData,
-        [e.target.name]: e.target.value,
+        [evt.target.name]: evt.target.value,
       };
     });
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addItem(formData);
+    setFormData({ product: "", quantity: 0 });
+  };
   return (
-    <form style={{display:"flex", flexDirection:"column"}}>
-      <h1>{formData.product}</h1>
-      <h2>Quantity: {formData.quantity}</h2>
-      <label htmlFor="product">Product Name </label>
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="product">Product Name</label>
       <input
         type="text"
         placeholder="product name"
@@ -23,15 +26,18 @@ export default function ShoppingListForm() {
         onChange={handleChange}
         value={formData.product}
       />
-      <label htmlFor="quantity">Quantity </label>
+      <label htmlFor="quantity">Quantity</label>
       <input
-        type="text"
-        placeholder="quantity"
+        type="number"
+        placeholder="1"
         name="quantity"
         id="quantity"
         onChange={handleChange}
         value={formData.quantity}
       />
+      <button>Add Item</button>
     </form>
   );
 }
+
+export default ShoppingListForm;
